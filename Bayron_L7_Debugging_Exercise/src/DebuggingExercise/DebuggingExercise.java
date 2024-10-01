@@ -38,8 +38,8 @@ public class DebuggingExercise {
 		for (int i =1; i<n; i++) {
 			c = a+b;
 			System.out.print(" "+c);
-			a=c;
-			b=a;	
+			a=b;
+			b=c;	
 		}
 		return b;
 	}
