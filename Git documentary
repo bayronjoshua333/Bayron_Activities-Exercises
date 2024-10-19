@@ -1,0 +1,18 @@
+Git documentaries:
+
+1. To Clone:
+git clone <ssh key>
+
+2. To fetch changes from the remote:
+git fetch
+
+3. To check status of local repo:
+git status
+
+4. compare local branch to the remote:
+git diff
+
+5. to push commit:
+git add .  or git add <name of file>
+git commit -m "your commit message"
+git push
