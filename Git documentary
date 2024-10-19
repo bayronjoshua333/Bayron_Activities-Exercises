@@ -16,3 +16,12 @@ git diff
 git add .  or git add <name of file>
 git commit -m "your commit message"
 git push
+
+6. Fix merge conflicts:
+git status
+
+open the conflicting files and fix it manually
+
+git add <file>
+git commit
+git push
