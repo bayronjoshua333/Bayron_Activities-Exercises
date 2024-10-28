@@ -6,26 +6,37 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
+        System.out.println("Choose your dragons: (Fire, Air, Wind, Stone)");
+
         // Select Dragon 1
-        System.out.println("Select CharDragon1 (Fire, Air, Water, Earth): ");
+        System.out.println("Choose Dragon 1: ");
         String dragon1Type = scanner.next();
-        System.out.println("Enter Skill 1 for Dragon 1: ");
-        int dragon1Skill1 = scanner.nextInt();
-        System.out.println("Enter Skill 2 for Dragon 1: ");
-        int dragon1Skill2 = scanner.nextInt();
-        Dragon dragon1 = new Dragon(dragon1Type, dragon1Skill1, dragon1Skill2, 100); // Assuming health starts at 100
+        Dragon dragon1 = createDragon(dragon1Type);
 
         // Select Dragon 2
-        System.out.println("Select CharDragon2 (Fire, Air, Water, Earth): ");
+        System.out.println("Choose Dragon 2: ");
         String dragon2Type = scanner.next();
-        System.out.println("Enter Skill 1 for Dragon 2: ");
-        int dragon2Skill1 = scanner.nextInt();
-        System.out.println("Enter Skill 2 for Dragon 2: ");
-        int dragon2Skill2 = scanner.nextInt();
-        Dragon dragon2 = new Dragon(dragon2Type, dragon2Skill1, dragon2Skill2, 100);
+        Dragon dragon2 = createDragon(dragon2Type);
 
         // Start the game
         Game game = new Game(dragon1, dragon2);
-        game.battle();
+        game.startBattle();
+    }
+
+    // Create a dragon based on type
+    public static Dragon createDragon(String type) {
+        switch (type.toLowerCase()) {
+            case "fire":
+                return new Dragon("Fire", "Ember", 10, "Punch", 5, 100);
+            case "air":
+                return new Dragon("Air", "Gust", 12, "Kick", 8, 100);
+            case "wind":
+                return new Dragon("Wind", "Breeze", 8, "Slam", 6, 100);
+            case "stone":
+                return new Dragon("Stone", "Rock Throw", 15, "Smack", 7, 100);
+            default:
+                System.out.println("Unknown dragon type, defaulting to Fire.");
+                return new Dragon("Fire", "Ember", 10, "Punch", 5, 100);
+        }
     }
 }
