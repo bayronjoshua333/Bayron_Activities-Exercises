@@ -49,10 +49,12 @@ public class Dragon {
     }
 
     public void displayHealth() {
+    	System.out.println();
         System.out.println(type + " Dragon's Health: " + health);
     }
     
     public void displayTurn() {
+    	System.out.println();
     	System.out.println(type + " dragon's turn");
     }
     

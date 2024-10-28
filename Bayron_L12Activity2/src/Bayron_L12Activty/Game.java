@@ -17,8 +17,10 @@ public class Game {
         while (dragon1.getHealth() > 0 && dragon2.getHealth() > 0) {
 
             dragon1.displayTurn();
+            
             System.out.println("1: " + dragon1.getSkill1Name() + " 2: " + dragon1.getSkill2Name());
             int dragon1SkillChoice = scanner.nextInt();
+            
             if (dragon1SkillChoice == 1) {
                 System.out.println(dragon1.getType()+ " dragon uses " + dragon1.getSkill1Name());
                 dragon2.reduceHealth(dragon1.getSkill1Damage());
@@ -35,8 +37,10 @@ public class Game {
             }
 
             dragon2.displayTurn();
+            
             System.out.println("1: " + dragon2.getSkill1Name() + " 2: " + dragon2.getSkill2Name());
             int dragon2SkillChoice = scanner.nextInt();
+            
             if (dragon2SkillChoice == 1) {
                 System.out.println(dragon2.getType()+ " dragon uses " + dragon2.getSkill1Name());
                 dragon1.reduceHealth(dragon2.getSkill1Damage());
@@ -48,7 +52,6 @@ public class Game {
             dragon1.displayHealth();
 
             if (dragon1.getHealth() == 0) {
-
                 System.out.println(dragon2.getType()+" dragon wins the game!");
                 break;
             }
