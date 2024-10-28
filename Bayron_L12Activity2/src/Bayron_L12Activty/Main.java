@@ -6,26 +6,35 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Select Dragon 1
-        System.out.println("Select CharDragon1 (Fire, Air, Water, Earth): ");
-        String dragon1Type = scanner.next();
-        System.out.println("Enter Skill 1 for Dragon 1: ");
-        int dragon1Skill1 = scanner.nextInt();
-        System.out.println("Enter Skill 2 for Dragon 1: ");
-        int dragon1Skill2 = scanner.nextInt();
-        Dragon dragon1 = new Dragon(dragon1Type, dragon1Skill1, dragon1Skill2, 100); // Assuming health starts at 100
+        System.out.println("Choose your dragons: (Fire, Air, Wind, Stone)");
 
-        // Select Dragon 2
-        System.out.println("Select CharDragon2 (Fire, Air, Water, Earth): ");
-        String dragon2Type = scanner.next();
-        System.out.println("Enter Skill 1 for Dragon 2: ");
-        int dragon2Skill1 = scanner.nextInt();
-        System.out.println("Enter Skill 2 for Dragon 2: ");
-        int dragon2Skill2 = scanner.nextInt();
-        Dragon dragon2 = new Dragon(dragon2Type, dragon2Skill1, dragon2Skill2, 100);
+        System.out.print("Choose Dragon 1: ");
+        String dragon1Type = scanner.nextLine();
+        Dragon dragon1 = createDragon(dragon1Type);
 
-        // Start the game
+        System.out.print("Choose Dragon 2: ");
+        String dragon2Type = scanner.nextLine();
+        Dragon dragon2 = createDragon(dragon2Type);
+
+  
         Game game = new Game(dragon1, dragon2);
-        game.battle();
+        game.startBattle();
+    }
+
+ 
+    public static Dragon createDragon(String type) {
+        switch (type.toLowerCase()) {
+            case "fire":
+                return new Dragon("Fire", "Ember", 27, "Punch", 23, 100);
+            case "air":
+                return new Dragon("Air", "Gust", 27, "Kick", 23, 100);
+            case "wind":
+                return new Dragon("Water", "Water bomb", 25, "Slam", 28, 100);
+            case "stone":
+                return new Dragon("Stone", "Rock Throw", 28, "Smack", 22, 100);
+            default:
+                System.out.println("You're lucky you have Rare Dragon.");
+                return new Dragon("Rare", "Ember", 99, "Punch", 1, 100);
+        }
     }
 }

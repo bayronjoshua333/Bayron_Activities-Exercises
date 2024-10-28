@@ -2,14 +2,18 @@ package Bayron_L12Activty;
 
 public class Dragon {
     private String type;
-    private int skill1;
-    private int skill2;
+    private String skill1Name;
+    private String skill2Name;
+    private int skill1Damage;
+    private int skill2Damage;
     private int health;
 
-    public Dragon(String type, int skill1, int skill2, int health) {
+    public Dragon(String type, String skill1Name, int skill1Damage, String skill2Name, int skill2Damage, int health) {
         this.type = type;
-        this.skill1 = skill1;
-        this.skill2 = skill2;
+        this.skill1Name = skill1Name;
+        this.skill1Damage = skill1Damage;
+        this.skill2Name = skill2Name;
+        this.skill2Damage = skill2Damage;
         this.health = health;
     }
 
@@ -17,12 +21,20 @@ public class Dragon {
         return type;
     }
 
-    public int getSkill1() {
-        return skill1;
+    public String getSkill1Name() {
+        return skill1Name;
     }
 
-    public int getSkill2() {
-        return skill2;
+    public String getSkill2Name() {
+        return skill2Name;
+    }
+
+    public int getSkill1Damage() {
+        return skill1Damage;
+    }
+
+    public int getSkill2Damage() {
+        return skill2Damage;
     }
 
     public int getHealth() {
@@ -39,4 +51,9 @@ public class Dragon {
     public void displayHealth() {
         System.out.println(type + " Dragon's Health: " + health);
     }
+    
+    public void displayTurn() {
+    	System.out.println(type + " dragon's turn");
+    }
+    
 }
