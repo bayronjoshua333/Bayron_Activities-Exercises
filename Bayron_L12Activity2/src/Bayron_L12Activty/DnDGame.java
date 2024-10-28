@@ -2,9 +2,9 @@ package Bayron_L12Activty;
 
 public class DnDGame {
     public static void main(String[] args) {
-        DnDCharacter swordsman = new SwordsMan("Swordsman");
-        DnDCharacter archer = new Archer("Archer");
-        DnDCharacter catalyst = new Catalyst("Catalyst");
+        DnDCharacters swordsman = new Swordsman("Swordsman");
+        DnDCharacters archer = new Archer("Archer");
+        DnDCharacters catalyst = new Catalyst("Catalyst");
 
         swordsman.attack(archer);
         archer.attack(swordsman);

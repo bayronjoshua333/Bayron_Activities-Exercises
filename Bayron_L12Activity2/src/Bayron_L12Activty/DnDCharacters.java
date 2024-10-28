@@ -15,7 +15,7 @@ public abstract class DnDCharacters {
 	
 	public void receiveDamage(int damage) {
 		this.health -= damage;
-		System.out.println(this.characterName + "received" + damage + "damage.");
+		System.out.println(this.characterName + " received " + damage + " damage.");
 	}
 	
 	public boolean isAlive() {
