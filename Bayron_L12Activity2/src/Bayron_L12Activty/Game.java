@@ -48,6 +48,7 @@ public class Game {
             dragon1.displayHealth();
 
             if (dragon1.getHealth() == 0) {
+
                 System.out.println(dragon2.getType()+" dragon wins the game!");
                 break;
             }
