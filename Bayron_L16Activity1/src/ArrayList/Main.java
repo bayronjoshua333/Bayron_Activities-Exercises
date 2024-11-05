@@ -4,20 +4,16 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        ArrayList<Book> books = new ArrayList<>();
+        ArrayList<Book> library = new ArrayList<>();
 
-        // Add books to the library
-        Library.addBooks(books);
+        Library.addBooks(library);
 
-        // Display all books
-        System.out.println("All Books in the Library:");
-        Library.displayBooks(books);
+        System.out.println("* * * * L I B R A R Y * * * *");
+        Library.displayBooks(library);
+        
+        Library.rentBooks(library);
 
-        // Rent books
-        Library.rentBooks(books);
-
-        // Display rented books
-        System.out.println("\nBooks after renting:");
-        Library.displayBooks(books);
+        System.out.println("* * * * RENTED BOOKS * * * *");
+        Library.displayRentedBooks(library);
     }
 }
