@@ -4,16 +4,24 @@ public class Dragon {
     private String type;
     private String skill1Name;
     private String skill2Name;
+    private String healName;
+    private String buffName;
     private int skill1Damage;
     private int skill2Damage;
+    private int healAmount;
+    private int buffAmount;
     private int health;
 
-    public Dragon(String type, String skill1Name, int skill1Damage, String skill2Name, int skill2Damage, int health) {
+    public Dragon(String type, String skill1Name, int skill1Damage, String skill2Name, int skill2Damage, String healName, int healAmount, String buffName, int buffAmount, int health) {
         this.type = type;
         this.skill1Name = skill1Name;
         this.skill1Damage = skill1Damage;
         this.skill2Name = skill2Name;
         this.skill2Damage = skill2Damage;
+        this.healName = healName;
+        this.healAmount = healAmount;
+        this.buffName = buffName;
+        this.buffAmount = buffAmount;
         this.health = health;
     }
 
@@ -29,6 +37,14 @@ public class Dragon {
         return skill2Name;
     }
 
+    public String getHealName() {
+        return healName;
+    }
+
+    public String getBuffName() {
+        return buffName;
+    }
+
     public int getSkill1Damage() {
         return skill1Damage;
     }
@@ -37,8 +53,28 @@ public class Dragon {
         return skill2Damage;
     }
 
+    public int getHealAmount() {
+        return healAmount;
+    }
+
+    public int getBuffAmount() {
+        return buffAmount;
+    }
+
     public int getHealth() {
         return health;
+    }
+
+    public void setHealth(int health) {
+        this.health = health;
+    }
+
+    public void setSkill1Damage(int skill1Damage) {
+        this.skill1Damage = skill1Damage;
+    }
+
+    public void setSkill2Damage(int skill2Damage) {
+        this.skill2Damage = skill2Damage;
     }
 
     public void reduceHealth(int damage) {
@@ -49,13 +85,11 @@ public class Dragon {
     }
 
     public void displayHealth() {
-    	System.out.println();
         System.out.println(type + " Dragon's Health: " + health);
     }
-    
+
     public void displayTurn() {
-    	System.out.println();
-    	System.out.println(type + " dragon's turn");
+        System.out.println();
+        System.out.println(type + " dragon's turn");
     }
-    
 }
