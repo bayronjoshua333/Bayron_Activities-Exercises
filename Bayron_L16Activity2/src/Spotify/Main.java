@@ -36,7 +36,7 @@ public class Main {
         			break;
         		case 5:
         			System.out.println("Exiting Spotify Playlist.");
-        			break;
+        			System.exit(choice);
         		default:
         			System.out.println("Invalid Choice. Please try again.");
         	}
