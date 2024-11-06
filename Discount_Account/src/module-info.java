@@ -1,8 +1,0 @@
-/**
- * 
- */
-/**
- * 
- */
-module Discount_Account {
-}
